@@ -7,21 +7,30 @@ body {
 h1 {
     /*color: whitesmoke;*/
     color: #E76F51;
+    text-align: center;
+    font-size: 100px;
 }
 
+h2 {
+    color: #E76F51;
+    text-align: center;
+    font-size: 50px;
+}
 
-
-#first-image {
+/* #first-image {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 #wall-calendar {
-    width: 900px; 
-    height: 500px; 
+    width: 700x; 
+    height: 700px; 
     object-fit: cover;
-    object-position: 25% 25%;
+    object-position: center;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100%;
 }
 
 #black-fair {
