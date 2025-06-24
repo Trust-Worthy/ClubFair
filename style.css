@@ -2,40 +2,54 @@
 body {
     /*background-color: #FBF8EF; */
     background-color: #E9C46A;
+    
 }
 
 h1 {
     /*color: whitesmoke;*/
     color: #E76F51;
     text-align: center;
-    font-size: 100px;
+    font-size: 75px;  
+    display: block; 
 }
+
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 h2 {
     color: #E76F51;
     text-align: center;
     font-size: 50px;
+    display: block;
 }
 
-/* #first-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+
+#wall-calendar-row {
+    display: inline-block;
+}
 
 #wall-calendar {
-    width: 700x; 
-    height: 700px; 
-    object-fit: cover;
-    object-position: center;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 100%;
-}
-
-#black-fair {
-    width: 900px; 
+    width: 500x; 
     height: 500px; 
     object-fit: cover;
-    object-position: 25% 25%;
+    object-position: center;
+    border-radius: 100%;
+    border: 4px solid #36BA98;
+}
+
+#black-fair-row {
+    display: inline-block;
+}
+
+
+#black-fair {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    object-position: right;
+    
 }
