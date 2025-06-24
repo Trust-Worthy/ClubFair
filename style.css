@@ -1,16 +1,36 @@
+/* body {
+    background-color: #E76F51;
+    color: ;
+} */
 
 body {
-    /*background-color: #FBF8EF; */
-    background-color: #E9C46A;
-    
+  background: linear-gradient(to bottom, 
+    #E9C46A 0%, 
+    #E9C46A 45%, 
+    #36BA98 50%, 
+    #36BA98 100%);
 }
 
+/* .top-third {
+    background-color: #E9C46A;
+    /* height: 100vh; 
+    padding: 40px;
+}
+
+.middle-third {
+    background-color: #36BA98;
+}
+
+*/
 h1 {
     /*color: whitesmoke;*/
     color: #E76F51;
+
     text-align: center;
-    font-size: 75px;  
+    font-size: 70px;  
     display: block; 
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .sriracha-regular {
@@ -25,21 +45,49 @@ h2 {
     text-align: center;
     font-size: 50px;
     display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 
-#wall-calendar-row {
+/* .stair-line {
+    font-size: 50px;
+    color: #E76F51;
+    margin-bottom: 0px;
+}
+.stair-line.one {
+    margin-left: 300px;
+    margin-bottom: 0px;
+}
+
+.stair-line.two {
+    margin-left: 600px;
+}
+.stair-line.three {
+    margin-left: 900px;
+    margin-bottom: 20px;
+} */
+
+.image-row {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+.images {
+    object-position: center;
+}
+
+.image-container {
     display: inline-block;
-}
-
-#wall-calendar {
-    width: 500x; 
-    height: 500px; 
+    width: 385px; 
+    height: 385px; 
     object-fit: cover;
     object-position: center;
     border-radius: 100%;
     border: 4px solid #36BA98;
 }
+
+
 
 #black-fair-row {
     display: inline-block;
@@ -51,5 +99,5 @@ h2 {
     height: 300px; 
     object-fit: cover;
     object-position: right;
-    
+
 }
