@@ -1,12 +1,14 @@
 
 body {
-    background-color: #FBF8EF;
+    /*background-color: #FBF8EF; */
+    background-color: #E9C46A;
 }
 
 h1 {
-    color: red;
+    /*color: whitesmoke;*/
+    color: #E76F51;
 }
 
 #ai-header {
-    color: black;
+    color: #62825D;
 }
