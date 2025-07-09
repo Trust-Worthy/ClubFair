@@ -37,21 +37,6 @@ body {
 .nav-links li a:hover {
     color: #36BA98;
 }
-
-h1 {
-    /*color: whitesmoke;*/
-    color: white;
-
-    text-align: center;
-    font-size: 70px;  
-    display: block; 
-    margin-top: 0px;
-    margin-bottom: 0px;
-
-    display: flex;
-    justify-content: center;
-}
-
 .banner {
     background: linear-gradient(
     135deg,
@@ -81,20 +66,79 @@ h1 {
 .banner-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+h1 {
+    /*color: whitesmoke;*/
+    color: white;
+
+    text-align: center;
+    font-size: 70px;  
+    display: block; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#ai-text {
+    color: white;
+
+    transition: color 0.3s ease;
+}
+
+#ai-text:hover {
+    color: #36BA98;
 }
 
 h2 {
     color: white;
     display: flex;
     justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0px;
     
 }
 
-.underline {
-    text-decoration: underline;
-    text-decoration-color:#36BA98;
+.section {
+    
+}
+
+.section-light {
+    background-color: white;
+}
+
+.section-dark {
+    background-color: rgb(255,232,216);
+}
+
+
+.underline-ani {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.underline-ani::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #36BA98;
+  transition: width 0.7s ease;
+}
+
+.underline-ani:hover::after {
+  width: 100%;
 }
 
 .sriracha-regular {
@@ -104,14 +148,7 @@ h2 {
 }
 
 
-h2 {
-    color: #F68537;
-    text-align: center;
-    font-size: 50px;
-    display: block;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
+
 
 
 /* .stair-line {
@@ -133,19 +170,24 @@ h2 {
 } */
 
 .image-row {
-    gap: 50px;
+
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px
 }
 .images {
     object-position: center;
     display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px
 }
 
 .image-container {
     display: inline-block;
-    width: 385px; 
-    height: 385px; 
+    width: 285px; 
+    height: 285px; 
     object-fit: cover;
     object-position: center;
     border-radius: 100%;
@@ -157,10 +199,12 @@ h2 {
     font-size: 40px;
     display: flex;
     justify-content: center;
+    color: #F4A261;
 }
-
-
 
 #blurb-1 {
 
 }
+
+
+
