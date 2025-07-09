@@ -21,14 +21,35 @@ body {
 
 .navbar-container {
   width: 100vw;            /* full viewport width */
-  background-color: #E76F51; /* or put bg on navbar itself */
+  background-color: #F4A261; /* or put bg on navbar itself */
   
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+    
 }
 
-.navbar {
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    
+}
+
+.navbar ul li a:hover {
+    
+}
+
+/* .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 40px;
     position: relative;
@@ -36,7 +57,9 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-}
+
+    
+} */
 
 .nav-links {
     list-style: none;
@@ -78,8 +101,9 @@ body {
     );
     color: white;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    margin-top: 0px;
+
+    padding-bottom: 150px;
     font-family: 'Inter', sans-serif;
    
     /* border-radius: 40px 40px 40px 40px; */
