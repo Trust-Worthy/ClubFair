@@ -64,7 +64,8 @@ body {
     );
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     font-family: 'Inter', sans-serif;
    
     /* border-radius: 40px 40px 40px 40px; */
@@ -82,14 +83,18 @@ body {
 }
 
 .bouncing-arrow {
-  font-size: 60px;
+  font-size: 80px;
   color: white;
   animation: bounce 2s infinite;
   transform: rotate(180deg); /* upside-down */
   text-align: center;
-  margin-top: 40px;
+  margin-top: 70px;
+  transition: color 0.3s ease;
 }
 
+.bouncing-arrow:hover {
+    color: #36BA98;
+}
 /* Bounce animation */
 @keyframes bounce {
   0%, 100% {
@@ -98,6 +103,36 @@ body {
   50% {
     transform: rotate(180deg) translateY(15px);
   }
+}
+
+
+.image-note {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  animation: stressBounce 30s ease-out infinite;
+  padding-bottom: 10px;
+}
+
+.image-note:hover {
+  animation: slamDown 0.2s ease-in-out;
+}
+
+@keyframes slamDown {
+  0%   { transform: translateY(0); }
+  80%  { transform: translateY(20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes stressBounce {
+  0%   { transform: translateY(0); }
+  15%  { transform: translateY(-60px); }  /* big bounce up */
+  30%  { transform: translateY(10px); }   /* slam down */
+  45%  { transform: translateY(-30px); }  /* bounce again */
+  60%  { transform: translateY(5px); }
+  75%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }      /* settle */
 }
 
 h1 {
@@ -180,12 +215,13 @@ h2 {
 
 
 .image-row {
-
+    padding-top: 100px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
     gap: 200px;
+   
 }
 .images {
     
@@ -193,7 +229,7 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 100px;
+    
 }
 
 .image-container {
@@ -207,12 +243,7 @@ h2 {
 
 }
 
-.image-note {
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    color: white;
-}
+
 
 #blurb-1 {
 
