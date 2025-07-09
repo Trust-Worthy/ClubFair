@@ -31,6 +31,14 @@ h1 {
     display: block; 
     margin-top: 0px;
     margin-bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
 }
 
 .sriracha-regular {
@@ -88,16 +96,6 @@ h2 {
 }
 
 
-
-#black-fair-row {
-    display: inline-block;
-}
-
-
-#black-fair {
-    width: 300px; 
-    height: 300px; 
-    object-fit: cover;
-    object-position: right;
-
+#blurb-1 {
+    
 }
