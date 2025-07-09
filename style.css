@@ -43,6 +43,14 @@ body {
 .nav-links li a:hover {
     color: #36BA98;
 }
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
 .banner {
     background: linear-gradient(
     135deg,
@@ -58,10 +66,7 @@ body {
     text-align: center;
     padding: 100px 20px;
     font-family: 'Inter', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+   
     /* border-radius: 40px 40px 40px 40px; */
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 
@@ -74,6 +79,25 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+.bouncing-arrow {
+  font-size: 60px;
+  color: white;
+  animation: bounce 2s infinite;
+  transform: rotate(180deg); /* upside-down */
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(180deg) translateY(0);
+  }
+  50% {
+    transform: rotate(180deg) translateY(15px);
+  }
 }
 
 h1 {
@@ -120,9 +144,7 @@ h2 {
 .about-section-text {
     color: #E9C46A;
 }
-.section {
-    
-}
+
 
 .section-light {
     background-color: white;
@@ -161,12 +183,17 @@ h2 {
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
+    gap: 200px;
 }
 .images {
-    object-position: center;
+    
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
 .image-container {
