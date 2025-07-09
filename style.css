@@ -9,6 +9,12 @@ body {
   background: white;
 }
 
+.page-font{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -106,6 +112,14 @@ h2 {
     
 }
 
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-section-text {
+    color: #E9C46A;
+}
 .section {
     
 }
@@ -141,53 +155,24 @@ h2 {
   width: 100%;
 }
 
-.sriracha-regular {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-
-
-
-
-/* .stair-line {
-    font-size: 50px;
-    color: #E76F51;
-    margin-bottom: 0px;
-}
-.stair-line.one {
-    margin-left: 300px;
-    margin-bottom: 0px;
-}
-
-.stair-line.two {
-    margin-left: 600px;
-}
-.stair-line.three {
-    margin-left: 900px;
-    margin-bottom: 20px;
-} */
 
 .image-row {
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px
+    flex-direction: row;
 }
 .images {
     object-position: center;
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px
 }
 
 .image-container {
     display: inline-block;
-    width: 285px; 
-    height: 285px; 
+    width: 485px; 
+    height: 485px; 
     object-fit: cover;
     object-position: center;
     border-radius: 100%;
@@ -199,7 +184,7 @@ h2 {
     font-size: 40px;
     display: flex;
     justify-content: center;
-    color: #F4A261;
+    color: white;
 }
 
 #blurb-1 {
