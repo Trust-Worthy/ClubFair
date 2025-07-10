@@ -102,7 +102,9 @@ body {
     color: white;
     text-align: center;
     margin-top: 0px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-bottom: 150px;
     font-family: 'Inter', sans-serif;
    
