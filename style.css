@@ -21,7 +21,7 @@ body {
 
 .navbar-container {
   width: 100vw;            /* full viewport width */
-  background-color: #F4A261; /* or put bg on navbar itself */
+  background-color: transparent; /* or put bg on navbar itself */
   
   box-sizing: border-box;
   display: flex;
@@ -29,25 +29,8 @@ body {
   align-items: center;
 
 }
-.navbar ul {
-    z-index: 1000; /* Ensures the navbar is on top of other elements */
-    
-}
 
-.navbar ul li {
-    float: left;
-    margin: 10px;
-}
-
-.navbar ul li a {
-    
-}
-
-.navbar ul li a:hover {
-    
-}
-
-/* .navbar {
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +42,7 @@ body {
     z-index: 999;
 
     
-} */
+}
 
 .nav-links {
     list-style: none;
@@ -105,7 +88,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 150px;
+    padding-bottom: 1500px;
     font-family: 'Inter', sans-serif;
    
     /* border-radius: 40px 40px 40px 40px; */
