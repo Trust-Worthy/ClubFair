@@ -80,3 +80,7 @@
 .hidden {
   display: none !important;
 }
+
+.cell.highlight {
+    background-color: rgba(25, 190, 122, 0.3);
+}

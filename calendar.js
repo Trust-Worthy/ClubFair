@@ -1,5 +1,9 @@
 let selectedDay = null;
 let selectedTime = null;
+let isDragging = false;
+let dragStartCell = null;
+let dragEndCell = null;
+let draggedCells = [];
 
 
 function submitClass() {
@@ -29,6 +33,11 @@ function submitClass() {
     document.getElementById("className").value = "";
     document.getElementById("startTime").value = "";
     document.getElementById("endTime").value = "";
+
+    draggedCells.forEach(cell => {
+        cell.classList.remove("highlight");
+    });
+    draggedCells = [];
 }
 
 
@@ -78,6 +87,56 @@ function generateTimeRows(startHour = 8, endHour = 20) {
 
     console.log("Rows generated");
 }
+
+
+calendarBody.addEventListener("mousedown", (e) => {
+    const cell = e.target.closest(".cell");
+    if (!cell) return;
+    isDragging = true;
+    dragStartCell = cell;
+    draggedCells = [cell]; // start with the first cell
+    cell.classList.add("highlight"); // optional visual cue
+});
+
+calendarBody.addEventListener("mouseover", (e) => {
+    if (!isDragging) return;
+    const cell = e.target.closest(".cell");
+    if (!cell || draggedCells.includes(cell)) return;
+
+    if (cell.dataset.day === dragStartCell.dataset.day) {
+        draggedCells.push(cell);
+        cell.classList.add("highlight");
+    }
+});
+
+calendarBody.addEventListener("mouseup", () => {
+    if (!isDragging || draggedCells.length === 0) return;
+    isDragging = false;
+
+    selectedDay = dragStartCell.dataset.day;
+
+    // Sort by time to find earliest and latest time
+    draggedCells.sort((a, b) => a.dataset.time.localeCompare(b.dataset.time));
+    selectedTime = draggedCells[0].dataset.time;
+
+    document.getElementById("startTime").value = draggedCells[0].dataset.time;
+    document.getElementById("endTime").value = getTimeAfter(
+        draggedCells[draggedCells.length - 1].dataset.time
+    );
+
+    // Show popup to name class
+    document.getElementById("classForm").classList.remove("hidden");
+});
+
+
+
+function getTimeAfter(timeStr) {
+    let [hour, minute] = timeStr.split(":").map(Number);
+    hour += 1; 
+    return `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}`;
+}
+
+
 
 // Run after DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
