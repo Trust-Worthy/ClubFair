@@ -2,13 +2,25 @@
 Styles specific to named sections
 */
 .banner {
-  background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%);
+  background-image: url("/images/clubfair-dark.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%); */
+  /* background-color: #f2a07c;
+  background-color: #2a7f6b;
+  background-color: #f4f4f4;
+  background-color: #1c1c1c;
+  background-color: #f0b4a1;
+  background-color: #bfe1d3; */
+
   color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 500px;
   font-family: 'Inter', sans-serif;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
@@ -22,7 +34,8 @@ Styles specific to named sections
 }
 
 .about-section {
-  background-color: #E76F51;
+  background-color: #2a7f6b;
+
   color: white;
   font-weight: 500;
   font-size: 30px;
@@ -36,7 +49,6 @@ Styles specific to named sections
     
 }
 .about-section-text {
-    color: #E9C46A;
 }
 
 .about-paragraph-div {
@@ -51,9 +63,9 @@ Styles specific to named sections
 
 
 .calendar-section {
-
+  
 }
 
 .days {
-  
+
 }
