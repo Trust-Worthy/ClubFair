@@ -86,8 +86,8 @@
             
             <h1>Enter Your Weekly Class Schedule</h1>
             <div class="calendar">
-                <div class="calendar-header">
-                <div class="time-label"></div>
+            <div class="calendar-header">
+                <div class="time-label"></div> <!-- top-left empty -->
                 <div>Monday</div>
                 <div>Tuesday</div>
                 <div>Wednesday</div>
@@ -95,27 +95,11 @@
                 <div>Friday</div>
                 <div>Saturday</div>
                 <div>Sunday</div>
-                </div>
-                <div class="calendar-body">
-                <!-- Time Rows -->
-                <!-- We'll repeat each row for each hour -->
-                <!-- Time label + 7 day columns -->
-                <!-- Each cell will be clickable -->
-                <!-- Let's start from 8 AM to 8 PM (12 rows) -->
-                <!-- We'll generate this with JS later, but for now let's hardcode a few -->
-                <!-- Example row: -->
-                <div class="calendar-row">
-                    <div class="time-label">8 AM</div>
-                    <div class="cell" data-day="monday" data-time="08:00"></div>
-                    <div class="cell" data-day="tuesday" data-time="08:00"></div>
-                    <div class="cell" data-day="wednesday" data-time="08:00"></div>
-                    <div class="cell" data-day="thursday" data-time="08:00"></div>
-                    <div class="cell" data-day="friday" data-time="08:00"></div>
-                    <div class="cell" data-day="saturday" data-time="08:00"></div>
-                    <div class="cell" data-day="sunday" data-time="08:00"></div>
-                </div>
-                <!-- Repeat row for 9 AM, 10 AM... -->
-                </div>
+            </div>
+
+            <div class="calendar-body" id="calendarBody">
+                <!-- JavaScript will fill rows here -->
+            </div>
             </div>
 
             <!-- Popup for class input -->
