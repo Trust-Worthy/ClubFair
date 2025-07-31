@@ -68,7 +68,7 @@
             </div>
         </section>
         
-        <section class="about-section">
+        <!-- <section class="about-section">
            
             <div class="about-paragraph-div">
                 <p class="about-paragraph">
@@ -78,33 +78,33 @@
                 </p>
             </div>
             
-        </section>
+        </section> -->
 
         
 
         <section class="calendar-section" >
             
-            <h2>Enter Your Weekly Class Schedule</h2>
+            <h1>Enter Your Weekly Class Schedule</h1>
             <div class="calendar">
-                <div class="calender-header">
-                    <div class="time-label"></div>
-                    <div>Monday</div>
-                    <div>Tuesday</div>
-                    <div>Wednesday</div>
-                    <div>Thursday</div>
-                    <div>Friday</div>
-                    <div>Saturday</div>
-                    <div>Sunday</div>
+                <div class="calendar-header">
+                <div class="time-label"></div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+                <div>Sunday</div>
                 </div>
                 <div class="calendar-body">
-                    <!-- Time Rows -->
-                    <!-- We'll repeat each row for each hour -->
-                    <!-- Time label + 7 day columns -->
-                    <!-- Each cell will be clickable -->
-                    <!-- Let's start from 8 AM to 8 PM (12 rows) -->
-                    <!-- We'll generate this with JS later, but for now let's hardcode a few -->
-                    <!-- Example row: -->
-                    <div class="calendar-row"></div>
+                <!-- Time Rows -->
+                <!-- We'll repeat each row for each hour -->
+                <!-- Time label + 7 day columns -->
+                <!-- Each cell will be clickable -->
+                <!-- Let's start from 8 AM to 8 PM (12 rows) -->
+                <!-- We'll generate this with JS later, but for now let's hardcode a few -->
+                <!-- Example row: -->
+                <div class="calendar-row">
                     <div class="time-label">8 AM</div>
                     <div class="cell" data-day="monday" data-time="08:00"></div>
                     <div class="cell" data-day="tuesday" data-time="08:00"></div>
@@ -113,25 +113,23 @@
                     <div class="cell" data-day="friday" data-time="08:00"></div>
                     <div class="cell" data-day="saturday" data-time="08:00"></div>
                     <div class="cell" data-day="sunday" data-time="08:00"></div>
-
                 </div>
-                <!-- Popup for class input -->
-                <!-- <div id="classForm" class="hidden">
-                    <label>Class Name:</label>
-                    <input type="text" id="className">
-
-                    <label>Start Time:</label>
-                    <input type="time" id="startTime" />
-
-                    <label>End Time:</label>
-                    <input type="time" id="endTime" />
-                
-                    <button onclick="submitClass()">Add Class</button>
-
-                </div> -->
-                <script src="calendar.js"></script>
-
+                <!-- Repeat row for 9 AM, 10 AM... -->
+                </div>
             </div>
+
+            <!-- Popup for class input -->
+            <div id="classForm" class="hidden">
+                <label>Class Name:</label>
+                <input type="text" id="className" />
+                <label>Start Time:</label>
+                <input type="time" id="startTime" />
+                <label>End Time:</label>
+                <input type="time" id="endTime" />
+                <button onclick="submitClass()">Add Class</button>
+            </div>
+
+            <script src="calendar.js"></script>
         </section>
         
 
