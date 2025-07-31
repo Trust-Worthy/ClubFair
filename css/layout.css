@@ -8,7 +8,7 @@ Page structure and layout utility classes
 
 
 .image-row {
-  padding-top: 100px;
+  padding-top: 55px;
   display: flex;
   justify-content: space-around;
   /* align-items: flex-start; */

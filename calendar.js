@@ -1,15 +1,6 @@
 let selectedDay = null;
 let selectedTime = null;
 
-document.querySelectorAll(".cell").forEach(cell => {
-    cell.addEventListener("click", () => {
-    selectedDay = cell.dataset.day;
-    selectedTime = cell.dataset.time;
-    document.getElementById("classForm").classList.remove("hidden");
-
-    });
-});
-
 
 function submitClass() {
     const name = document.getElementById("className").value;
@@ -42,6 +33,17 @@ function submitClass() {
 
 
 const calendarBody = document.getElementById("calendarBody");
+
+calendarBody.addEventListener("click", (e) => {
+    const cell = e.target.closest(".cell");
+    if (!cell) return; // clicked outside a cell
+
+    selectedDay = cell.dataset.day;
+    selectedTime = cell.dataset.time;
+    document.getElementById("classForm").classList.remove("hidden");
+});
+
+
 const days = ["monday", "tuesday", "wednesday","thursday", "friday", "saturday","sunday"];
 
 
@@ -49,7 +51,7 @@ function generateTimeRows(startHour = 8, endHour = 20) {
     for (let hour = startHour; hour < endHour; hour++) {
         const row = document.createElement("div");
         row.classList.add("calendar-row");
-
+        
         // Create time label on the left 
         const timeLabel = document.createElement("div")
         timeLabel.classList.add("time-label");
@@ -57,6 +59,27 @@ function generateTimeRows(startHour = 8, endHour = 20) {
                         : hour > 12 ? `${hour - 12} PM`
                         : `${hour} AM`;
 
-        
+        timeLabel.textContent = displayHour;
+        row.appendChild(timeLabel);
+
+        // Create a cell for each day of the week
+        days.forEach(day => {
+            const cell = document.createElement("div");
+            cell.classList.add("cell");
+            cell.dataset.day = day;
+            cell.dataset.time = `${hour.toString().padStart(2,'0')}:00`; // e.g., "08:00"
+            // Add this line for debugging so you can see the cell's day and time
+            // cell.textContent = `${day} ${hour}:00`;
+            row.appendChild(cell);
+        });
+
+        calendarBody.appendChild(row);
     }
+
+    console.log("Rows generated");
 }
+
+// Run after DOM loaded
+document.addEventListener("DOMContentLoaded", () => {
+  generateTimeRows();
+});

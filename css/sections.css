@@ -32,6 +32,21 @@ Styles specific to named sections
   padding-top: 50px;
 }
 
+.description-card {
+  max-width: 1500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  font-size: 16px;
+  color: #264653;
+  
+}
+
+.description {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
 .about-section {
 
   color: white;
