@@ -10,7 +10,8 @@ html {
 }
 
 body {
-  background: white;
+  /* background: white; */
+  background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%);
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-style: normal;

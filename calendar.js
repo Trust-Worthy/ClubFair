@@ -20,5 +20,23 @@ function submitClass() {
         alert("Please fill all fields");
         return;
     }
+
+    // Find all relevant cells and add class block
+
+    const cells = document.querySelectorAll(`.cell[data-day="${selectedDay}"]`);
+    cells.forEach(cell => {
+        const time = cell.dataset.time;
+        if (time >= start && time < end) {
+            const block = document.createElement("div");
+            block.className = "class-block";
+            block.innerText = name;
+            cell.appendChild(block)
+        }
+    });
+
+    document.getElementById("classForm").classList.add("hidden");
+    document.getElementById("className").value = "";
+    document.getElementById("startTime").value = "";
+    document.getElementById("endTime").value = "";
 }
 

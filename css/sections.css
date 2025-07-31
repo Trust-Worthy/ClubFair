@@ -33,7 +33,6 @@ Styles specific to named sections
 }
 
 .about-section {
-  background-color: #2a7f6b;
 
   color: white;
   font-weight: 500;
@@ -61,7 +60,7 @@ Styles specific to named sections
 }
 
 .footer {
-  background-color: #F4A261;
+  
 }
 
 .footer-content {
