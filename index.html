@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/components.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="stylesheet" href="css/sections.css">
-        
+        <link rel="stylesheet" href="css/calendar.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap" rel="stylesheet">
@@ -115,27 +115,29 @@
                     <div class="cell" data-day="sunday" data-time="08:00"></div>
 
                 </div>
+                <!-- Popup for class input -->
+                <div id="classForm" class="hidden">
+                    <label>Class Name:</label>
+                    <input type="text" id="className">
+
+                    <label>Start Time:</label>
+                    <input type="time" id="startTime" />
+
+                    <label>End Time:</label>
+                    <input type="time" id="endTime" />
+                    <!--When clicked run the js function submitClass()-->
+                    <button onclick="submitClass()">Add Class</button>
+
+                </div>
+                <script src="calendar.js"></script>
+
             </div>
         </section>
         
-        
 
-        <div class="form-container">
-            <form class="form">
-            
-            <label for=""></label>
-            <input type="text">
-
-            <label for=""></label>
-            <input type="text">
-
-            <label for=""></label>
-            <input type="text">
-
-        </form>
-        </div>
         
         <footer class="footer">
+            <h1>Footer</h1>
             <div class="footer-content">
                 <p>© 2025 ClubFair. All rights reserved.</p>
 

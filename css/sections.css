@@ -60,32 +60,8 @@ Styles specific to named sections
   
 }
 
-
-.calendar-section {
-  background-color: #E9C46A;
-}
-
-.calendar {
-
-}
-
-.calendar-header {
-
-}
-
-.time-label {
-
-}
-
-.calendar-body {
-
-}
-.calendar-row {
-  
-}
-
 .footer {
-
+  background-color: #F4A261;
 }
 
 .footer-content {
