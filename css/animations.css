@@ -1,0 +1,50 @@
+/* animations.css 
+Animations and transitions
+*/
+.bouncing-arrow {
+  font-size: 80px;
+  color: white;
+  animation: bounce 2s infinite;
+  transform: rotate(180deg);
+  text-align: center;
+  margin-top: 70px;
+  transition: color 0.3s ease;
+}
+
+.bouncing-arrow:hover {
+  color: #36BA98;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: rotate(180deg) translateY(0); }
+  50% { transform: rotate(180deg) translateY(15px); }
+}
+
+.image-note {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  animation: stressBounce 30s ease-out infinite;
+  padding-bottom: 10px;
+}
+
+.image-note:hover {
+  animation: slamDown 0.2s ease-in-out;
+}
+
+@keyframes slamDown {
+  0%   { transform: translateY(0); }
+  80%  { transform: translateY(20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes stressBounce {
+  0%   { transform: translateY(0); }
+  15%  { transform: translateY(-60px); }
+  30%  { transform: translateY(10px); }
+  45%  { transform: translateY(-30px); }
+  60%  { transform: translateY(5px); }
+  75%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

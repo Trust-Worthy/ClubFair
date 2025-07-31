@@ -1,0 +1,41 @@
+/* sections.css 
+Styles specific to named sections
+*/
+.about-section-text {
+  color: #E9C46A;
+}
+
+#ai-text {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#ai-text:hover {
+  color: #36BA98;
+}
+
+.underline-ani {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.underline-ani::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #36BA98;
+  transition: width 0.7s ease;
+}
+
+.underline-ani:hover::after {
+  width: 100%;
+}
+
+#blurb-1 {
+  /* Add styles here as needed */
+}
