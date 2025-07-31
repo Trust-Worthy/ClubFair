@@ -40,3 +40,23 @@ function submitClass() {
     document.getElementById("endTime").value = "";
 }
 
+
+const calendarBody = document.getElementById("calendarBody");
+const days = ["monday", "tuesday", "wednesday","thursday", "friday", "saturday","sunday"];
+
+
+function generateTimeRows(startHour = 8, endHour = 20) {
+    for (let hour = startHour; hour < endHour; hour++) {
+        const row = document.createElement("div");
+        row.classList.add("calendar-row");
+
+        // Create time label on the left 
+        const timeLabel = document.createElement("div")
+        timeLabel.classList.add("time-label");
+        const displayHour = hour === 12 ? "12 PM"
+                        : hour > 12 ? `${hour - 12} PM`
+                        : `${hour} AM`;
+
+        
+    }
+}
