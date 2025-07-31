@@ -94,11 +94,15 @@ Reusable UI elements (navbar,etc.)
 .dark-mode-button {
   padding: 8px 16px;
   cursor: pointer;
-  background-color: #222;
+  background-color:#36BA98;
   color: #fff;
   border: none;
   border-radius: 4px;
 
   /* Prevent shrinking */
   flex-shrink: 0;
+}
+
+.nav-left {
+  width: 100px; /* same width as button, roughly */
 }

@@ -2,12 +2,12 @@
 Styles specific to named sections
 */
 .banner {
-  background-image: url("/images/clubfair-dark.png");
+  /* background-image: url("/images/clubfair-dark.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   
-  /* background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%); */
+  background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%);
   /* background-color: #f2a07c;
   background-color: #2a7f6b;
   background-color: #f4f4f4;
@@ -20,7 +20,6 @@ Styles specific to named sections
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 500px;
   font-family: 'Inter', sans-serif;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
@@ -63,9 +62,18 @@ Styles specific to named sections
 
 
 .calendar-section {
-  
+  background-color: #E9C46A;
 }
 
 .days {
+
+}
+
+
+.footer {
+
+}
+
+.footer-content {
 
 }
