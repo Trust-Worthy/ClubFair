@@ -65,10 +65,24 @@ Styles specific to named sections
   background-color: #E9C46A;
 }
 
-.days {
+.calendar {
 
 }
 
+.calendar-header {
+
+}
+
+.time-label {
+
+}
+
+.calendar-body {
+
+}
+.calendar-row {
+  
+}
 
 .footer {
 
