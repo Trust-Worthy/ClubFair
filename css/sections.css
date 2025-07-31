@@ -1,41 +1,59 @@
 /* sections.css 
 Styles specific to named sections
 */
+.banner {
+  background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 100px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.about-section {
+  background-color: #E76F51;
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-container {
+    
+}
 .about-section-text {
-  color: #E9C46A;
+    color: #E9C46A;
 }
 
-#ai-text {
-  color: white;
-  transition: color 0.3s ease;
+.about-paragraph-div {
+  display: flex;
+  
 }
 
-#ai-text:hover {
-  color: #36BA98;
+
+.about-paragraph {
+  
 }
 
-.underline-ani {
-  position: relative;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
+
+.calendar-section {
+
 }
 
-.underline-ani::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: #36BA98;
-  transition: width 0.7s ease;
-}
-
-.underline-ani:hover::after {
-  width: 100%;
-}
-
-#blurb-1 {
-  /* Add styles here as needed */
+.days {
+  
 }
