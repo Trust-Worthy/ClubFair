@@ -14,6 +14,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap" rel="stylesheet">
         <script src="index.js" defer></script>
+        <!-- ✅ Load clubs first -->
+        <script src="clubs.js"></script>
     </head>
     
     <body>
@@ -86,10 +88,10 @@
         </section> -->
 
         
-
+        <h2>Enter Your Weekly Class Schedule</h2>
         <section class="calendar-section" id="create-schedule">
             
-            <h1>Enter Your Weekly Class Schedule</h1>
+            
             <div class="calendar">
             <div class="calendar-header">
                 <div class="time-label"></div> <!-- top-left empty -->
@@ -117,10 +119,29 @@
                 <input type="time" id="endTime" />
                 <button onclick="submitClass()">Add Class</button>
             </div>
+        
+            <div id="calendarContainer" style="display: flex; gap: 2rem;">
+                <div id="calendarBody"></div>
+
+                <!-- Club card list -->
+                <div id="clubCardPanel">
+                    <h2>Clubs</h2>
+                    <div id="clubList" style="max-height: 600px; overflow-y: scroll;"></div>
+                    <button id="filterButton">Filter</button>
+                    <button id="commitButton">Commit to Clubs!</button>
+                </div>
+            </div>
 
             <script src="calendar.js"></script>
+        </div>
         </section>
-        
+       
+
+        <!-- Committed clubs display -->
+        <div id="committedClubsSection">
+        <h2>Clubs You Joined</h2>
+        <ul id="committedClubsList"></ul>
+        </div>
 
         
         <footer class="footer">

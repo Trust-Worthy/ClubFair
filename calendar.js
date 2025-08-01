@@ -132,13 +132,96 @@ calendarBody.addEventListener("mouseup", () => {
 
 function getTimeAfter(timeStr) {
     let [hour, minute] = timeStr.split(":").map(Number);
-    hour += 1; 
+    hour += 1;  // TO-DO: customize to 30 or 15 min increments later
     return `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}`;
 }
 
 
 
+
+
+function renderClubs(clubsToRender = clubs) {
+  const clubList = document.getElementById("clubList");
+  clubList.innerHTML = ""; // clear previous
+
+  clubsToRender.forEach((club, index) => {
+    const card = document.createElement("div");
+    card.className = "club-card";
+    card.dataset.index = index;
+
+    card.innerHTML = `
+      <h3>${club.name}</h3>
+      <p>${club.meetings.map(m => `${m.day}, ${m.start} - ${m.end}`).join("<br>")}</p>
+      <input type="checkbox" class="club-select" data-index="${index}">
+    `;
+
+    clubList.appendChild(card);
+  });
+}
+
+
+function timeToMinutes(t) {
+  const [h, m] = t.split(":").map(Number);
+  return h * 60 + m;
+}
+
+function getBusySlots() {
+  const busy = [];
+
+  const classBlocks = document.querySelectorAll(".class-block");
+  classBlocks.forEach(block => {
+    const cell = block.parentElement;
+    busy.push({
+      day: cell.dataset.day,
+      time: timeToMinutes(cell.dataset.time)
+    });
+  });
+
+  return busy;
+}
+
+function isClubAvailable(club, busySlots) {
+  return club.meetings.every(meeting => {
+    const meetingStart = timeToMinutes(meeting.start);
+    const meetingEnd = timeToMinutes(meeting.end);
+    
+    return !busySlots.some(slot => {
+      return (
+        slot.day === meeting.day &&
+        slot.time >= meetingStart &&
+        slot.time < meetingEnd
+      );
+    });
+  });
+}
+
+document.getElementById("filterButton").addEventListener("click", () => {
+  const busySlots = getBusySlots();
+  const filtered = clubs.filter(club => isClubAvailable(club, busySlots));
+  renderClubs(filtered);
+});
+
+document.getElementById("commitButton").addEventListener("click", () => {
+  const selectedIndexes = Array.from(document.querySelectorAll(".club-select:checked"))
+    .map(input => parseInt(input.dataset.index));
+  
+  const selectedClubs = selectedIndexes.map(i => clubs[i]);
+
+  const list = document.getElementById("committedClubsList");
+  list.innerHTML = "";
+
+  selectedClubs.forEach(club => {
+    const li = document.createElement("li");
+    li.textContent = club.name;
+    list.appendChild(li);
+  });
+});
+
+
 // Run after DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
   generateTimeRows();
+  renderClubs(clubs); // render all clubs at first
 });
+
+

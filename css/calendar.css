@@ -3,6 +3,8 @@
   padding: 20px;
   text-align: center;
   color: black;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .calendar {
@@ -83,4 +85,96 @@
 
 .cell.highlight {
     background-color: rgba(25, 190, 122, 0.3);
+}
+
+.club-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #fafafa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#calendarContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+#clubCardPanel {
+  flex: 1;
+  max-width: 300px;
+}
+
+#calendarBody {
+  flex: 3;
+}
+
+#committedClubsSection {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+#filterButton,
+#commitButton {
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#filterButton:hover,
+#commitButton:hover {
+  background-color: #2563eb; /* blue-600 */
+  transform: translateY(-1px);
+}
+
+#filterButton:active,
+#commitButton:active {
+  background-color: #1d4ed8; /* blue-700 */
+  transform: translateY(0);
+}
+
+#calendarContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.calendar {
+  flex: 2;
+  min-width: 600px;
+}
+
+#clubCardPanel {
+  flex: 1;
+  max-height: 800px;
+  overflow-y: auto;
+  border-left: 2px solid #ccc;
+  padding-left: 1rem;
+}
+
+
+.club-panel {
+  flex: 1;
+  max-height: 800px;
+  overflow-y: auto;
+  border-left: 2px solid #ccc;
+  padding-left: 1rem;
+}
+
+#clubList {
+  max-height: 600px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
 }
