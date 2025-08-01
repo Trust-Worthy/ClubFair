@@ -19,9 +19,9 @@
         <script src="main.js"></script>
     </head>
     
-    <body class="dark-mode">
+    <body>
     
-        <section class="banner dark-mode">
+        <section class="banner">
 
             <nav class="navbar">
                 <div class="nav-left"></div> <!-- placeholder -->
@@ -78,38 +78,25 @@
             </div>
         </section>
         
-        <!-- <section class="about-section">
-           
-            <div class="about-paragraph-div">
-                <p class="about-paragraph">
-                Incoming and returning college students struggle to effectively manage their new school schedules every semester. 
-                New classes, multiple clubs, and campus jobs are things students have to balance. 
-                ClubFair helps students find time for club meetings amidst their immovable course schedules .
-                </p>
-            </div>
-            
-        </section> -->
-
-        
-        
+         
         <section class="calendar-section" id="create-schedule">
             <h2>Enter Your Weekly Class Schedule</h2>
             
             <div class="calendar">
-            <div class="calendar-header">
-                <div class="time-label"></div> <!-- top-left empty -->
-                <div>Monday</div>
-                <div>Tuesday</div>
-                <div>Wednesday</div>
-                <div>Thursday</div>
-                <div>Friday</div>
-                <div>Saturday</div>
-                <div>Sunday</div>
-            </div>
+                <div class="calendar-header">
+                    <div class="time-label"></div> <!-- top-left empty -->
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                    <div>Sunday</div>
+                </div>
 
-            <div class="calendar-body" id="calendarBody">
-                <!-- JavaScript will fill rows here -->
-            </div>
+                <div class="calendar-body" id="calendarBody">
+                    <!-- JavaScript will fill rows here -->
+                </div>
             </div>
 
             <!-- Popup for class input -->
@@ -124,6 +111,9 @@
             </div>
         
             <div id="calendarContainer" style="display: flex; gap: 2rem;">
+                <div class="calendar">
+                    
+                </div>
                 <div id="calendarBody"></div>
 
                 <!-- Club card list -->
@@ -139,22 +129,28 @@
         </div>
         </section>
        
-
-        <!-- Committed clubs display -->
-        <div id="committedClubsSection">
-        <h2>Clubs You Joined</h2>
-        <ul id="committedClubsList"></ul>
-        </div>
-
-        
-        <footer class="footer">
-            <h1>Footer</h1>
-            <div class="footer-content">
-                <p>© 2025 ClubFair. All rights reserved.</p>
-
+        <section class="committed-section">
+            <!-- Committed clubs display -->
+            <div id="committedClubsSection">
+            <h2>Clubs You Joined</h2>
+            <ul id="committedClubsList"></ul>
             </div>
 
-        </footer>
+        </section>
+       
+
+        <section class="footer-section">
+
+            <footer class="footer">
+                <h1>Footer</h1>
+                <div class="footer-content">
+                    <p>© 2025 ClubFair. All rights reserved.</p>
+    
+                </div>
+    
+            </footer>
+
+        </section>
         
 
     </body>

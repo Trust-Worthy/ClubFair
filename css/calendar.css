@@ -1,11 +1,3 @@
-.calendar-section {
-  font-family: sans-serif;
-  padding: 20px;
-  text-align: center;
-  color: black;
-  /* display: flex;
-  justify-content: space-between; */
-}
 
 .calendar {
   display: flex;

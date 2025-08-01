@@ -1,10 +1,17 @@
 /* sections.css 
 Styles specific to named sections
 */
-.banner {
-  
-  background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%);
 
+
+.banner,
+.calendar-section,
+.footer-section,
+.committed-section {
+  background: transparent; /* Or remove any background set at all */
+}
+
+.banner {
+  /* background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%); */
   color: white;
   text-align: center;
   display: flex;
@@ -64,6 +71,18 @@ Styles specific to named sections
 .about-paragraph {
   
 }
+
+.calendar-section {
+  font-family: sans-serif;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  /* background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%); */
+
+  /* display: flex;
+  justify-content: space-between; */
+}
+
 
 .footer {
   
