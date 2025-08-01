@@ -4,7 +4,6 @@ Animations and transitions
 
 .underline-animation {
   position: relative;
-  color: white;
   text-decoration: none;
   display: inline-block;
 }
@@ -25,7 +24,6 @@ Animations and transitions
 }
 
 #ai-text {
-  color: white;
   transition: color 0.3s ease;
 }
 
@@ -36,7 +34,6 @@ Animations and transitions
 
 .bouncing-arrow {
   font-size: 80px;
-  color: white;
   animation: bounce 2s infinite;
   transform: rotate(180deg);
   text-align: center;
@@ -57,7 +54,6 @@ Animations and transitions
   font-size: 40px;
   display: flex;
   justify-content: center;
-  color: white;
   animation: stressBounce 30s ease-out infinite;
   padding-bottom: 10px;
 }

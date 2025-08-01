@@ -1,8 +1,16 @@
+.calendar-section {
+  font-family: sans-serif;
+  padding: 20px;
+  text-align: center;
+  
+  /* display: flex;
+  justify-content: space-between; */
+}
 
 .calendar {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
+  border: 3px solid #36ba98;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -10,7 +18,7 @@
 .calendar-header {
   display: grid;
   grid-template-columns: 80px repeat(7, 1fr);
-  background-color: #f0f0f0;
+
   font-weight: bold;
   text-align: center;
 }
@@ -23,19 +31,19 @@
 .calendar-row {
   display: grid;
   grid-template-columns: 80px repeat(7, 1fr);
-  border-top: 1px solid #ddd;
+  border-top: 3px solid #36ba98;
   min-height: 40px;
 }
 
 .time-label {
   padding: 10px;
-  background-color: #fafafa;
+  background-color: transparent;
   text-align: center;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .cell {
-  border-left: 1px solid #eee;
+  border-left: 3px solid #36ba98;
   cursor: pointer;
   position: relative;
 }
@@ -47,7 +55,6 @@
 .class-block {
   position: absolute;
   background-color: rgba(100, 149, 237, 0.8);
-  color: white;
   padding: 2px 4px;
   font-size: 12px;
   border-radius: 4px;
@@ -84,8 +91,12 @@
   padding: 1rem;
   margin-bottom: 0.75rem;
   border-radius: 0.5rem;
-  background-color: #fafafa;
+  background-color: transparent;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.club-card:hover {
+  background-color: #36ba98;
 }
 
 #calendarContainer {

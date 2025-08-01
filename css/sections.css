@@ -12,7 +12,6 @@ Styles specific to named sections
 
 .banner {
   /* background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%); */
-  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -27,6 +26,7 @@ Styles specific to named sections
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+  font-size: 30px;
 }
 
 .description-card {
@@ -36,35 +36,13 @@ Styles specific to named sections
   line-height: 1.6;
   font-size: 16px;
   /* color: #264653; */
-  color: white;
+
   
 }
 
 .description {
   margin-top: 40px;
   font-size: 30px;
-}
-
-.about-section {
-
-  color: white;
-  font-weight: 500;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-container {
-    
-}
-.about-section-text {
-}
-
-.about-paragraph-div {
-  display: flex;
-  
 }
 
 
@@ -80,7 +58,6 @@ Styles specific to named sections
   font-family: sans-serif;
   padding: 20px;
   text-align: center;
-  color: black;
 }
 
 
