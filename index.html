@@ -16,11 +16,12 @@
         <script src="index.js" defer></script>
         <!-- ✅ Load clubs first -->
         <script src="clubs.js"></script>
+        <script src="main.js"></script>
     </head>
     
-    <body>
+    <body class="dark-mode">
     
-        <section class="banner">
+        <section class="banner dark-mode">
 
             <nav class="navbar">
                 <div class="nav-left"></div> <!-- placeholder -->
@@ -30,7 +31,8 @@
                     <li ><a href="#create-schedule">Create Schedule</a></li>
                     <li ><a href="#links">Links</a></li>
                 </ul>
-                <button class="dark-mode-button">Dark Mode</button>
+                <button class="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
+                
             </nav>
             <div class="banner-text">
                 <div>

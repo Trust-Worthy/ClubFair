@@ -17,6 +17,19 @@ body {
   font-style: normal;
 }
 
+body.dark-mode .banner {
+  background: linear-gradient(
+    135deg,
+    #1a3c34 0%,
+    #1a3c34 10%,
+    #3c2a4d 30%,
+    #5a3f6b 50%,
+    #8c4b3f 70%,
+    #1a3c34 90%,
+    #1a3c34 100%
+  );
+}
+
 
 
 h1 {
