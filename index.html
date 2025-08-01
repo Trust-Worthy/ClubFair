@@ -80,54 +80,50 @@
         
          
         <section class="calendar-section" id="create-schedule">
-            <h2>Enter Your Weekly Class Schedule</h2>
-            
-            <div class="calendar">
-                <div class="calendar-header">
-                    <div class="time-label"></div> <!-- top-left empty -->
-                    <div>Monday</div>
-                    <div>Tuesday</div>
-                    <div>Wednesday</div>
-                    <div>Thursday</div>
-                    <div>Friday</div>
-                    <div>Saturday</div>
-                    <div>Sunday</div>
-                </div>
+  <h2>Enter Your Weekly Class Schedule</h2>
 
-                <div class="calendar-body" id="calendarBody">
-                    <!-- JavaScript will fill rows here -->
-                </div>
-            </div>
+  <div id="calendarContainer">
+    <!-- Weekly Calendar -->
+    <div class="calendar">
+      <div class="calendar-header">
+        <div class="time-label"></div> <!-- Empty top-left -->
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+        <div>Sunday</div>
+      </div>
 
-            <!-- Popup for class input -->
-            <div id="classForm" class="hidden">
-                <label>Class Name:</label>
-                <input type="text" id="className" />
-                <label>Start Time:</label>
-                <input type="time" id="startTime" />
-                <label>End Time:</label>
-                <input type="time" id="endTime" />
-                <button onclick="submitClass()">Add Class</button>
-            </div>
-        
-            <div id="calendarContainer" style="display: flex; gap: 2rem;">
-                <div class="calendar">
-                    
-                </div>
-                <div id="calendarBody"></div>
+      <div class="calendar-body" id="calendarBody">
+        <!-- JavaScript will populate time slots here -->
+      </div>
+    </div>
 
-                <!-- Club card list -->
-                <div id="clubCardPanel">
-                    <h2>Clubs</h2>
-                    <div id="clubList" style="max-height: 600px; overflow-y: scroll;"></div>
-                    <button id="filterButton">Filter</button>
-                    <button id="commitButton">Commit to Clubs!</button>
-                </div>
-            </div>
+    <!-- Club List Sidebar -->
+    <div id="clubCardPanel">
+      <h2>Clubs</h2>
+      <div id="clubList"></div>
+      <button id="filterButton">Filter</button>
+      <button id="commitButton">Commit to Clubs!</button>
+    </div>
+  </div>
 
-            <script src="calendar.js"></script>
-        </div>
-        </section>
+  <!-- Popup for Adding a Class -->
+  <div id="classForm" class="hidden">
+    <label>Class Name:</label>
+    <input type="text" id="className" />
+    <label>Start Time:</label>
+    <input type="time" id="startTime" />
+    <label>End Time:</label>
+    <input type="time" id="endTime" />
+    <button onclick="submitClass()">Add Class</button>
+  </div>
+
+  <script src="calendar.js"></script>
+</section>
+
        
         <section class="committed-section">
             <!-- Committed clubs display -->

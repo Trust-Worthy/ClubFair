@@ -3,12 +3,12 @@ Styles specific to named sections
 */
 
 
-.banner,
+/* .banner,
 .calendar-section,
 .footer-section,
 .committed-section {
-  background: transparent; /* Or remove any background set at all */
-}
+  background: transparent; 
+} */
 
 .banner {
   /* background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%); */
@@ -73,14 +73,14 @@ Styles specific to named sections
 }
 
 .calendar-section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
   font-family: sans-serif;
   padding: 20px;
   text-align: center;
   color: black;
-  /* background: linear-gradient(135deg, #36BA98 0%, #36BA98 10%, #E9C46A 30%, #F4A261 50%, #E76F51 70%, #36BA98 90%, #36BA98 100%); */
-
-  /* display: flex;
-  justify-content: space-between; */
 }
 
 
