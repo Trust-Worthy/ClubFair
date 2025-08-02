@@ -1,7 +1,3 @@
-Absolutely — you’ve built out a solid feature set already, so your README should reflect all the **actual functionality** you’ve implemented. Here’s an updated version that’s accurate and clear:
-
----
-
 # ClubFair
 
 **ClubFair** is a web app that helps college students organize their weekly schedules and discover campus clubs that fit into their availability — removing the guesswork from getting involved.
