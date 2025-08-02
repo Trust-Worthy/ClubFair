@@ -166,8 +166,12 @@
                 <div id="clubCardPanel">
                 <h2>Clubs</h2>
                 <div id="clubList"></div>
-                <button id="filterButton">Filter</button>
-                <button id="commitButton">Commit to Clubs!</button>
+                    <button id="filterButton">Filter</button>
+                    <button id="commitButton">Commit to Clubs!</button>
+                </div>
+                <div class="created-clubs-list-section" style="flex: 1; max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 15px; border-radius: 10px;">
+                    <h2>Created Clubs</h2>
+                    <div id="createdClubList"></div>
                 </div>
             </div>
 
@@ -232,7 +236,138 @@
                  </form>
              </section>
         </div> -->
+        <section class="add-club-section" id="create">
+            <div class="add-club-container">
+                <h2>Start Your Own Club</h2>
+                <p class="add-club-description">
+                    Don't see a club that fits your interests? Create your own and help other students discover new passions!
+                </p>
+                
+                <form class="add-club-form" id="addClubForm" onsubmit="handleAddClub(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clubName">Club Name</label>
+                            <input type="text" id="clubName" placeholder="Photography Club" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="clubCategory">Category</label>
+                            <select id="clubCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="academic">Academic</option>
+                                <option value="arts">Arts & Creative</option>
+                                <option value="sports">Sports & Recreation</option>
+                                <option value="service">Community Service</option>
+                                <option value="professional">Professional Development</option>
+                                <option value="cultural">Cultural & International</option>
+                                <option value="hobby">Hobby & Interest</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clubDay">Meeting Day</label>
+                            <select id="clubDay" required>
+                                <option value="">Select Day</option>
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="saturday">Saturday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="clubStart">Start Time</label>
+                            <input type="time" id="clubStart" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="clubEnd">End Time</label>
+                            <input type="time" id="clubEnd" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clubDescription">Club Description</label>
+                        <textarea id="clubDescription" placeholder="Tell others what your club is about, what activities you'll do, and who should join!" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Contact Email</label>
+                        <input type="email" id="contactEmail" placeholder="your.email@example.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">Create Club</button>
+                    </div>
+                </form>
+
+                <!-- Success message -->
+                <div id="clubCreatedMessage" class="success-message hidden">
+                    <div class="success-content">
+                        <h3>🎉 Club Created Successfully!</h3>
+                        <p>Your club has been added to the directory and will appear in the club list above.</p>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                
+            </style>
+
+            <script>
+                function handleAddClub(event) {
+                    event.preventDefault();
+                    
+                    // Get form data
+                    const clubName = document.getElementById('clubName').value;
+                    const clubCategory = document.getElementById('clubCategory').value;
+                    const clubDay = document.getElementById('clubDay').value;
+                    const clubStart = document.getElementById('clubStart').value;
+                    const clubEnd = document.getElementById('clubEnd').value;
+                    const clubDescription = document.getElementById('clubDescription').value;
+                    const contactEmail = document.getElementById('contactEmail').value;
+                    
+                    // Create new club object
+                    const newClub = {
+                        name: clubName,
+                        category: clubCategory,
+                        day: clubDay,
+                        startTime: clubStart,
+                        endTime: clubEnd,
+                        description: clubDescription || 'No description provided.',
+                        contact: contactEmail
+                    };
+                    
+                    // Add to clubs array if it exists (this would integrate with your existing club system)
+                    if (typeof clubs !== 'undefined' && Array.isArray(clubs)) {
+                        clubs.push(newClub);
+                        // Refresh club list if the function exists
+                        if (typeof refreshClubList === 'function') {
+                            refreshClubList();
+                        }
+                    }
+                    
+                    // Show success message
+                    document.getElementById('clubCreatedMessage').classList.remove('hidden');
+                    
+                    // Reset form
+                    document.getElementById('addClubForm').reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        document.getElementById('clubCreatedMessage').classList.add('hidden');
+                    }, 5000);
+                    
+                    // Scroll to success message
+                    document.getElementById('clubCreatedMessage').scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
+                }
+            </script>
+        </section>
 
        <section class="footer-section" id="links">
             <footer class="footer">

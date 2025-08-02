@@ -249,3 +249,93 @@ document.addEventListener("DOMContentLoaded", () => {
   renderClubs(clubs); // render all clubs at first
 });
 
+
+// Global array for created clubs
+const createdClubs = [];
+
+// Function to render created clubs
+function renderCreatedClubs() {
+  const createdList = document.getElementById("createdClubList");
+  createdList.innerHTML = ""; // Clear old
+
+  if (createdClubs.length === 0) {
+    createdList.innerHTML = "<p>No clubs created yet.</p>";
+    return;
+  }
+
+  createdClubs.forEach((club, index) => {
+    const card = document.createElement("div");
+    card.className = "club-card";
+    card.dataset.index = index;
+
+    const meetingTime = `${capitalize(club.day)}: ${club.startTime} - ${club.endTime}`;
+
+    card.innerHTML = `
+      <h3>${club.name}</h3>
+      <p><strong>Category:</strong> ${capitalize(club.category)}</p>
+      <p><strong>Meeting:</strong> ${meetingTime}</p>
+      <p>${club.description}</p>
+      <p><strong>Contact:</strong> <a href="mailto:${club.contact}" style="color:inherit;">${club.contact}</a></p>
+    `;
+
+    createdList.appendChild(card);
+  });
+}
+
+// Modified handleAddClub to add to createdClubs and re-render
+function handleAddClub(event) {
+  event.preventDefault();
+  
+  // Get form data
+  const clubName = document.getElementById('clubName').value;
+  const clubCategory = document.getElementById('clubCategory').value;
+  const clubDay = document.getElementById('clubDay').value;
+  const clubStart = document.getElementById('clubStart').value;
+  const clubEnd = document.getElementById('clubEnd').value;
+  const clubDescription = document.getElementById('clubDescription').value;
+  const contactEmail = document.getElementById('contactEmail').value;
+  
+  // Create new club object
+  const newClub = {
+    name: clubName,
+    category: clubCategory,
+    day: clubDay,
+    startTime: clubStart,
+    endTime: clubEnd,
+    description: clubDescription || 'No description provided.',
+    contact: contactEmail
+  };
+  
+  // Add to createdClubs array
+  createdClubs.push(newClub);
+  
+  // Refresh created clubs list
+  renderCreatedClubs();
+  
+  // Show success message
+  document.getElementById('clubCreatedMessage').classList.remove('hidden');
+  
+  // Reset form
+  document.getElementById('addClubForm').reset();
+  
+  // Hide success message after 5 seconds
+  setTimeout(() => {
+    document.getElementById('clubCreatedMessage').classList.add('hidden');
+  }, 5000);
+  
+  // Scroll to success message
+  document.getElementById('clubCreatedMessage').scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+}
+
+// Helper function for capitalization
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Call this once on DOM ready to initialize the created clubs section empty message
+document.addEventListener("DOMContentLoaded", () => {
+  renderCreatedClubs();
+});
+
