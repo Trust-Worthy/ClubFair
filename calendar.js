@@ -5,6 +5,9 @@ let dragStartCell = null;
 let dragEndCell = null;
 let draggedCells = [];
 
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 function submitClass() {
     const name = document.getElementById("className").value;
@@ -210,11 +213,15 @@ document.getElementById("commitButton").addEventListener("click", () => {
   const list = document.getElementById("committedClubsList");
   list.innerHTML = "";
 
-  selectedClubs.forEach(club => {
+    selectedClubs.forEach(club => {
     const li = document.createElement("li");
-    li.textContent = club.name;
+    const timeInfo = club.meetings
+      .map(m => `${capitalize(m.day)}: ${m.start}–${m.end}`)
+      .join(", ");
+    li.innerHTML = `<strong>${club.name}</strong><br><span class="club-time">${timeInfo}</span>`;
     list.appendChild(li);
   });
+
 });
 
 function cancelClass() {
