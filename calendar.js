@@ -242,31 +242,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderClubs(clubs); // render all clubs at first
 });
 
-
-// document.getElementById("addClubForm").addEventListener("submit", function (e) {
-//   e.preventDefault();
-
-//   const name = document.getElementById("clubName").value.trim();
-//   const day = document.getElementById("clubDay").value;
-//   const start = document.getElementById("clubStart").value;
-//   const end = document.getElementById("clubEnd").value;
-
-//   if (!name || !day || !start || !end) {
-//     alert("Please fill in all fields.");
-//     return;
-//   }
-
-//   // Add to the global `clubs` array
-//   clubs.push({
-//     name,
-//     meetings: [{ day, start, end }]
-//   });
-
-//   renderClubs(clubs);
-
-//   // Clear form
-//   this.reset();
-//   alert("🎉 Your club has been added!");
-// });
-
-

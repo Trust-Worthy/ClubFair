@@ -1,4 +1,4 @@
-const clubs = [
+const defaultClubs = [
   {
     name: "Overcaffeinated Programmers United",
     meetings: [
@@ -290,3 +290,7 @@ const clubs = [
     ]
   }
 ];
+
+
+const storedClubs = JSON.parse(localStorage.getItem("clubs"));
+const clubs = storedClubs || defaultClubs;

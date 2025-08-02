@@ -73,6 +73,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  font-size: 20px;
 }
 
 
@@ -130,7 +131,6 @@ button[type="submit"]:hover {
 .form-group label {
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
 }
 
 .form-group input {
@@ -224,18 +224,25 @@ body.dark-mode .form-group button {
   color: #000; /* ensure text is readable */
   border: 1px solid rgba(255, 255, 255, 0.3); /* optional: soft edge */
 }
+
+.add-club-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
 .add-club-section {
   margin-top: 2rem;
   padding: 1rem;
-  background-color: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  border: 1px solid #d9e7de;
   border-radius: 10px;
+  max-width: 1500px;
 }
 
 .add-club-section h2 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #065f46;
 }
 
 .add-club-section .form-group {
