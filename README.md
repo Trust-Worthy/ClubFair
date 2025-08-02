@@ -2,6 +2,14 @@
 
 **ClubFair** is a web app that helps college students organize their weekly schedules and discover campus clubs that fit into their availability — removing the guesswork from getting involved.
 
+<div>
+    <a href="https://www.loom.com/share/ab3cd5de5b854040b67cacbe0845de9c">
+      <p>Preview</p>
+    </a>
+    <a href="https://www.loom.com/share/ab3cd5de5b854040b67cacbe0845de9c">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/ab3cd5de5b854040b67cacbe0845de9c-2b5a2e2161754ef2-full-play.gif">
+    </a>
+  </div>
 ---
 
 ## 🎯 Purpose
