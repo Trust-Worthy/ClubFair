@@ -106,3 +106,9 @@ Reusable UI elements (navbar,etc.)
 .nav-left {
   width: 100px; /* same width as button, roughly */
 }
+
+
+.RSVP-form {
+  display: flex;
+  justify-content: right;
+}
