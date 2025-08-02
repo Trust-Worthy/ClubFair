@@ -1,75 +1,89 @@
-# ClubFair
-
-**ClubFair** is a simple web app that helps college students coordinate their academic, work, and club schedules — removing the confusion and chaos from finding time to be involved on campus.
+Absolutely — you’ve built out a solid feature set already, so your README should reflect all the **actual functionality** you’ve implemented. Here’s an updated version that’s accurate and clear:
 
 ---
 
-##  Purpose
+# ClubFair
 
-College life is demanding. Between new class schedules, part-time jobs, and extracurricular activities, it’s hard for students to figure out when they’re actually free to meet with clubs or attend events. 
+**ClubFair** is a web app that helps college students organize their weekly schedules and discover campus clubs that fit into their availability — removing the guesswork from getting involved.
 
-**ClubFair** exists to solve that. Instead of flipping between calendars and chat apps, students can:
+---
 
-- Import their weekly school schedule
-- Organize and visualize their availability
-- Discover and filter club events that match their real-life availability
+## 🎯 Purpose
 
-It’s like a smart “club-finder” that respects your time.
+Between packed class schedules, part-time jobs, and extracurriculars, college students often struggle to figure out when they're actually free.
+
+**ClubFair** solves this by letting students:
+
+* Input and visualize their weekly schedule
+* Filter campus clubs by their real availability
+* Commit to clubs they want to join
+* RSVP to events with a simple form
 
 ---
 
 ## 👥 Who Is It For?
 
-- **Incoming college students** navigating their first semester
-- **Returning students** managing packed schedules
-- **Club organizers** trying to schedule meetings around member availability
+* 🆕 **New students** who want to explore campus involvement
+* 🎓 **Busy upperclassmen** juggling academics, jobs, and interests
+* 👥 **Club leaders** who want to plan around members’ schedules
 
 ---
 
-## Key Features (so far)
+## ✅ Features Implemented
 
-- 🧭 Simple and clean navigation layout (Home, About, Schedule, Links)
+* 📅 **Interactive Weekly Schedule**
 
-- 📷 Visual storytelling via relatable images (crammed calendars, coffee-fueled chaos)
+  * Click and drag to select time slots
+  * Add custom class blocks with a name, start, and end time
+
+* 🎯 **Smart Club Matching**
+
+  * See a list of clubs with meeting times
+  * Filter out clubs that conflict with your class schedule
+  * Commit to clubs you're interested in
+
+* 📝 **RSVP Form with Validation**
+
+  * First name, year in school, and confirmation required
+  * Invalid submissions are highlighted
+  * Valid RSVP shows up in a list
+
+* 🎉 **Animated Modal**
+
+  * After RSVP submission, a thank-you modal pops up with animated visuals
+  * Automatically disappears after a short delay
 
 
----
+* 💡 **Responsive Club Card Layout**
 
-##  Planned Features
-- 📅 Visual weekday planner using editable text areas
-- 🔄 "Import School Schedule" and "Browse Clubs" buttons (interactive flow planned)
-- 🔗 Space for club links, resources, and event descriptions
-- 🔌 School schedule integration (Google Calendar or course importer)
-- 📈 Smart time-matching for clubs based on student availability
-- 🕒 Dynamic club meeting recommendations
-- 🔍 Club browsing filters based on open time blocks
-- 📬 RSVP and event reminder functionality
+  * Scrollable, card-styled display with meeting info and selection checkboxes
 
----
+* 🔗 **Helpful Footer**
 
-## 🌐 Live Preview
-
-[[Preview]](https://flexible-bronze-dress-845.vscodeedu.app/)
----
-
-##  Tech Stack
-
-- HTML5
-- CSS3
-- Google Fonts (Roboto, Sriracha)
-- Local images & simple placeholders
-
----
-
-## Contributions
-
-Made as part of a foundational web development course project. Feedback, ideas, and real student insights are welcome!
+  * Includes curated links about time management and student involvement
 
 ---
 
-## Notes
+## 🛠 Tech Stack
 
-- This is an early-stage prototype — not all features are functional yet.
-- All student schedule data is currently mocked or user-input manually.
-- No backend yet, but future versions will support persistent data and user profiles.
+* **HTML5** — semantic layout
+* **CSS3** — Flexbox and card-style layouts
+* **JavaScript** — DOM manipulation, filtering logic, event handling
+* **Google Fonts** — Roboto, Sriracha
+* **No frameworks** — built from scratch for learning purposes
 
+---
+
+## 💬 Contributions & Feedback
+
+Built as part of a front-end development learning project. Real-world feedback from students and club leaders is welcome!
+
+---
+
+## 📝 Notes
+
+* This is a static front-end prototype
+* No login or backend (yet!)
+* Data is stored in memory during a session (not persistent)
+
+---
