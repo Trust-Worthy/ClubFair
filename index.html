@@ -82,10 +82,22 @@
         <section class="sign-up-section" id="join">
             <h2>RSVP For ClubFair</h2>
             <div class="sign-up-container">
+
+                <!-- LEFT SIDE: Form + Description -->
                 <form class="sign-up-form" onsubmit="handleSignUp(event)">
+                <p>
+                    Sign up for ClubFair for the upcoming semester. Before classes start, add your schedule,
+                    filter through existing clubs, and commit to them! Or, upload your own club for everyone to see.
+                </p>
+
                 <div class="form-group">
                     <label for="name">First Name</label>
                     <input type="text" id="name" placeholder="Jane" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
                 </div>
 
                 <div class="form-group">
@@ -99,47 +111,57 @@
                     <option value="graduate student">Graduate Student</option>
                     </select>
                 </div>
-                 <p>Sign up for ClubFair for the upcoming semester. Before classes start, add you schedule, filter through the existing clubs,
-                    and commit to them! Or, you can upload your own club for everyone to see.
-                 </p>
-                <div class="RSVP-form">
-                   
-                    <div class="form-group">
-                        <button type="submit">RSVP</button>
-                    </div>
-                    </form>
-    
-                    <!-- Display sign-ups here -->
-                    <div class="sign-up-display" id="signUpDisplay">
-                    <!-- Messages will appear here -->
-                    </div>
+
+                <div class="form-group">
+                    <button type="submit">RSVP</button>
                 </div>
+                </form>
+
+                <!-- RIGHT SIDE: RSVP List -->
+                <div class="sign-up-display" id="signUpDisplay">
+                <h3>Participants</h3>
+                <!-- RSVP entries will appear here -->
+                </div>
+
             </div>
             <script>
-
                 function handleSignUp(event) {
-                    event.preventDefault(); // Prevent page reload
+                    event.preventDefault(); // Don't reload the page
 
-                    const name = document.getElementById("name").value.trim();
-                    const year = document.getElementById("year").value;
+                    const nameInput = document.getElementById("name");
+                    const emailInput = document.getElementById("email");
+                    const yearSelect = document.getElementById("year");
 
-                    if (name && year) {
-                        const message = `${name} is a ${year} and has signed up for ClubFair.`;
+                    const name = nameInput.value.trim();
+                    const email = emailInput.value.trim();
+                    const year = yearSelect.value;
 
-                        const display = document.getElementById("signUpDisplay");
-                        const p = document.createElement("p");
-                        p.textContent = message;
-                        display.appendChild(p);
+                    const isValid = name && email && year;
 
-                        // Optionally, clear form
-                        event.target.reset();
+                    if (!isValid) {
+                    [nameInput, emailInput, yearSelect].forEach((input) => {
+                        if (!input.value) input.style.border = "2px solid red";
+                        else input.style.border = ""; // reset if valid
+                    });
+                    return;
                     }
+
+                    const display = document.getElementById("signUpDisplay");
+                    const p = document.createElement("p");
+                    p.textContent = `${name} (${email}) is a ${year} and has signed up for ClubFair.`;
+                    display.appendChild(p);
+
+                    // Clear form and border colors
+                    event.target.reset();
+                    [nameInput, emailInput, yearSelect].forEach(input => input.style.border = "");
                 }
             </script>
+
         </section>
 
+
          
-        <section class="calendar-section" id="create-schedule">
+        <section class="calendar-section" id="start">
             <h2>Enter Your Weekly Class Schedule</h2>
 
             <div id="calendarContainer">
@@ -196,7 +218,7 @@
         </section>
        
 
-        <section class="footer-section">
+        <section class="footer-section" id="links">
 
             <footer class="footer">
                 <h1>Footer</h1>
